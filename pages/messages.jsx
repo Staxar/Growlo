@@ -4,7 +4,7 @@ import { View, Text } from 'react-native';
 export default function MessagesScreen({navigation}) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home!</Text>
+      <Text>Messages</Text>
     </View>
   );
 }
