@@ -10,45 +10,46 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 const Tab = createBottomTabNavigator();
 export default function App() {
   return (
-    <NavigationContainer>
+    <View style={{ flex: 1, width: '100%', height: '100%' }}>
       <View style={styles.container}>
         <Text style={styles.text_title}>
           Growlo
           <Ionicons name="leaf" size={32} color="green" />
         </Text>
       </View>
-
-      <Tab.Navigator initialRouteName="HomeScreen">
-        <Tab.Screen
-          name="HomeScreen"
-          component={HomeScreen}
-          options={{ tabBarIcon: ({}) => <Ionicons name="home" size={25} color="black" /> }}
-        />
-        <Tab.Screen
-          name="SearchScreen"
-          component={SearchScreen}
-          options={{ tabBarIcon: ({}) => <Ionicons name="search" size={25} color="black" /> }}
-        />
-        <Tab.Screen
-          name="SellScreen"
-          component={SellScreen}
-          options={{ tabBarIcon: ({}) => <Ionicons name="add" size={25} color="black" /> }}
-        />
-        <Tab.Screen
-          name="MessagesScreen"
-          component={MessagesScreen}
-          options={{
-            tabBarBadge: 3,
-            tabBarIcon: ({}) => <Ionicons name="paper-plane" size={25} color="black" />,
-          }}
-        />
-        <Tab.Screen
-          name="ProfileScreen"
-          component={ProfileScreen}
-          options={{ tabBarIcon: ({}) => <Ionicons name="person" size={25} color="black" /> }}
-        />
-      </Tab.Navigator>
-    </NavigationContainer>
+      <NavigationContainer>
+        <Tab.Navigator initialRouteName="HomeScreen">
+          <Tab.Screen
+            name="HomeScreen"
+            component={HomeScreen}
+            options={{ tabBarIcon: ({}) => <Ionicons name="home" size={25} color="black" /> }}
+          />
+          <Tab.Screen
+            name="SearchScreen"
+            component={SearchScreen}
+            options={{ tabBarIcon: ({}) => <Ionicons name="search" size={25} color="black" /> }}
+          />
+          <Tab.Screen
+            name="SellScreen"
+            component={SellScreen}
+            options={{ tabBarIcon: ({}) => <Ionicons name="add" size={25} color="black" /> }}
+          />
+          <Tab.Screen
+            name="MessagesScreen"
+            component={MessagesScreen}
+            options={{
+              tabBarBadge: 3,
+              tabBarIcon: ({}) => <Ionicons name="paper-plane" size={25} color="black" />,
+            }}
+          />
+          <Tab.Screen
+            name="ProfileScreen"
+            component={ProfileScreen}
+            options={{ tabBarIcon: ({}) => <Ionicons name="person" size={25} color="black" /> }}
+          />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </View>
   );
 }
 
@@ -63,6 +64,5 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 18,
     padding: 12,
-    fontFamily: 'sans-serif-light',
   },
 });
