@@ -12,7 +12,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <View style={styles.container}>
-        <Text>
+        <Text style={styles.text_title}>
           Growlo
           <Ionicons name="leaf" size={32} color="green" />
         </Text>
@@ -56,7 +56,13 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#63ab76',
     alignItems: 'center',
-    justifyContent: 'center',
-    height: '8%',
+    justifyContent: 'flex-end',
+    height: '10%',
+  },
+  text_title: {
+    textAlign: 'center',
+    fontSize: 18,
+    padding: 12,
+    fontFamily: 'sans-serif-light',
   },
 });
