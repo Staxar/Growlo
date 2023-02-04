@@ -21,6 +21,7 @@ export default function Block({ props }) {
         data={props.data}
         renderItem={({ item }) => <BlockContent props={item} />}
         keyExtractor={(item) => item.id}
+        style={{ overflow: 'hidden' }}
       ></FlatList>
     </View>
   );

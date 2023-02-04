@@ -39,5 +39,6 @@ const styles = StyleSheet.create({
     width: 120,
     padding: 10,
     borderRadius: 10,
+    resizeMode: 'cover',
   },
 });
