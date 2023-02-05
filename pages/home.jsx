@@ -13,6 +13,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Fruits/apple.png'),
           count: 25,
           unit: 'kg',
+          location: 'Wies Polska',
         },
         {
           id: '2',
@@ -20,6 +21,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Fruits/cherries.webp'),
           count: 25,
           unit: 'kg',
+          location: 'Wies Polska',
         },
         {
           id: '3',
@@ -27,6 +29,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Fruits/peach.webp'),
           count: 25,
           unit: 'kg',
+          location: 'Wies Polska',
         },
         {
           id: '4',
@@ -34,6 +37,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Fruits/pear.webp'),
           count: 25,
           unit: 'kg',
+          location: 'Wies Polska',
         },
       ],
     },
@@ -47,6 +51,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Vegetables/carrots.webp'),
           count: 85,
           unit: 'kg',
+          location: 'Wies Polska',
         },
         {
           id: '2',
@@ -54,6 +59,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Vegetables/celery.webp'),
           count: 15,
           unit: 'kg',
+          location: 'Wies Polska',
         },
         {
           id: '3',
@@ -61,6 +67,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Vegetables/leek.webp'),
           count: 2,
           unit: 'kg',
+          location: 'Wies Polska',
         },
         {
           id: '4',
@@ -68,6 +75,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Vegetables/parsley.webp'),
           count: 25,
           unit: 'kg',
+          location: 'Wies Polska',
         },
       ],
     },
@@ -81,6 +89,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Homemade_preserves/apple_muse.webp'),
           count: 11,
           unit: 'kg',
+          location: 'Wies Polska',
         },
         {
           id: '2',
@@ -88,6 +97,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Homemade_preserves/compote.webp'),
           count: 1,
           unit: 'kg',
+          location: 'Wies Polska',
         },
         {
           id: '3',
@@ -95,6 +105,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Homemade_preserves/jarcucumber.webp'),
           count: 25,
           unit: 'kg',
+          location: 'Wies Polska',
         },
         {
           id: '4',
@@ -102,6 +113,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Homemade_preserves/jarpeach.webp'),
           count: 25,
           unit: 'kg',
+          location: 'Wies Polska',
         },
       ],
     },
@@ -115,6 +127,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Delicacies/craberries.webp'),
           count: 25,
           unit: 'kg',
+          location: 'Wies Polska',
         },
         {
           id: '2',
@@ -122,6 +135,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Delicacies/dried_mushrooms.webp'),
           count: 25,
           unit: 'kg',
+          location: 'Wies Polska',
         },
         {
           id: '3',
@@ -129,6 +143,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Delicacies/dried_plum.webp'),
           count: 25,
           unit: 'kg',
+          location: 'Wies Polska',
         },
         {
           id: '4',
@@ -136,6 +151,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Delicacies/hazelnuts.webp'),
           count: 25,
           unit: 'kg',
+          location: 'Wies Polska',
         },
       ],
     },
@@ -149,6 +165,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Dairy/butter.webp'),
           count: 25,
           unit: 'kg',
+          location: 'Wies Polska',
         },
         {
           id: '2',
@@ -156,6 +173,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Dairy/buttermilk.webp'),
           count: 25,
           unit: 'kg',
+          location: 'Wies Polska',
         },
         {
           id: '3',
@@ -163,6 +181,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Dairy/cheese.webp'),
           count: 25,
           unit: 'kg',
+          location: 'Wies Polska',
         },
         {
           id: '4',
@@ -170,6 +189,7 @@ export default function HomeScreen({ navigation }) {
           img: require('../assets/Dairy/feta_cheese.webp'),
           count: 25,
           unit: 'kg',
+          location: 'Wies Polska',
         },
       ],
     },
@@ -180,7 +200,7 @@ export default function HomeScreen({ navigation }) {
         <View style={styles.home_content}>
           <FlatList
             data={DATA}
-            renderItem={({ item }) => <Block props={item} />}
+            renderItem={({ item }) => <Block props={item} navigation={navigation} />}
             keyExtractor={(item) => item.id}
           />
         </View>
