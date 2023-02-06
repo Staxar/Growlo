@@ -20,18 +20,17 @@ export default function BlockContent({ props }) {
           Quantity: {props.count} {props.unit}
         </Text>
         <Text variant="bodySmall">Location: {props.location}</Text>
-        <View style={{ alignItems: 'flex-end', flex: 1 }}>
-          <Text variant="labelSmall">
-            Author:{''}
-            <Avatar.Icon
-              source={require('../assets/avatar.png')}
-              size={12}
-              style={{
-                alignSelf: 'flex-end',
-                flex: 1,
-              }}
-            />
-          </Text>
+        <View
+          style={{
+            alignItems: 'flex-end',
+            flex: 1,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            width: '100%',
+          }}
+        >
+          <Text variant="labelSmall">{props.author}</Text>
+          <Avatar.Image size={18} source={require('../assets/avatar.png')} />
         </View>
       </Card.Content>
     </Card>
