@@ -12,4 +12,8 @@ module.exports = StyleSheet.create({
     textAlign: 'center',
     padding: 12,
   },
+  full_container: {
+    width: '100%',
+    height: '100%',
+  },
 });

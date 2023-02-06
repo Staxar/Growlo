@@ -14,7 +14,12 @@ export default function BlockContent({ props }) {
     >
       <Card.Cover source={props.img} style />
 
-      <Card.Content style={{ marginHorizontal: 10, marginTop: 10 }}>
+      <Card.Content
+        style={{
+          marginHorizontal: 0,
+          marginTop: 10,
+        }}
+      >
         <Text variant="titleMedium">Prize: {props.id}</Text>
         <Text variant="bodySmall">
           Quantity: {props.count} {props.unit}
