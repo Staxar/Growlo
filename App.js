@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import ProfileScreen from './pages/profile';
 import HomeScreen from './pages/home';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -7,12 +7,14 @@ import SearchScreen from './pages/search';
 import SellScreen from './pages/sell';
 import MessagesScreen from './pages/messages';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { Text } from 'react-native-paper';
+const globalstyle = require('./styles/style');
 const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <View style={{ flex: 1, width: '100%', height: '100%' }}>
-      <View style={styles.container}>
-        <Text style={styles.text_title}>
+      <View style={globalstyle.header_container}>
+        <Text style={globalstyle.header_text} variant="headlineSmall">
           Growlo
           <Ionicons name="leaf" size={32} color="green" />
         </Text>
@@ -53,16 +55,4 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#63ab76',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    height: '10%',
-  },
-  text_title: {
-    textAlign: 'center',
-    fontSize: 18,
-    padding: 12,
-  },
-});
+const styles = StyleSheet.create({});
