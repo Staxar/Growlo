@@ -9,7 +9,8 @@ export const DATA = [
         img: require('../assets/Fruits/apple.png'),
         count: 25,
         unit: 'kg',
-        location: 'Wies Polska',
+        location: 'Raleigh',
+        author: 'Marcin Domagała',
       },
       {
         id: '2',
@@ -17,7 +18,8 @@ export const DATA = [
         img: require('../assets/Fruits/cherries.webp'),
         count: 25,
         unit: 'kg',
-        location: 'Wies Polska',
+        location: 'Seattle',
+        author: 'Jakub Jakubowski',
       },
       {
         id: '3',
@@ -25,7 +27,8 @@ export const DATA = [
         img: require('../assets/Fruits/peach.webp'),
         count: 25,
         unit: 'kg',
-        location: 'Wies Polska',
+        location: 'Texas',
+        author: 'Wojciech Wojciechowski',
       },
       {
         id: '4',
@@ -33,7 +36,17 @@ export const DATA = [
         img: require('../assets/Fruits/pear.webp'),
         count: 25,
         unit: 'kg',
-        location: 'Wies Polska',
+        location: 'Hawaii',
+        author: 'Kuba Kubowski',
+      },
+      {
+        id: '5',
+        title: 'Something',
+        img: require('../assets/Fruits/pear.webp'),
+        count: 12,
+        unit: 'kg',
+        location: 'Connecticut',
+        author: 'Michał Michałowski',
       },
     ],
   },
@@ -47,7 +60,8 @@ export const DATA = [
         img: require('../assets/Vegetables/carrots.webp'),
         count: 85,
         unit: 'kg',
-        location: 'Wies Polska',
+        location: 'Charlottesville',
+        author: 'Robert Robertowski',
       },
       {
         id: '2',
@@ -55,7 +69,8 @@ export const DATA = [
         img: require('../assets/Vegetables/celery.webp'),
         count: 15,
         unit: 'kg',
-        location: 'Wies Polska',
+        location: 'Georgia',
+        author: 'Martyna Martynowska',
       },
       {
         id: '3',
@@ -63,7 +78,8 @@ export const DATA = [
         img: require('../assets/Vegetables/leek.webp'),
         count: 2,
         unit: 'kg',
-        location: 'Wies Polska',
+        location: 'Indiana',
+        author: 'Tomasz Tomowski',
       },
       {
         id: '4',
@@ -72,6 +88,7 @@ export const DATA = [
         count: 25,
         unit: 'kg',
         location: 'Wies Polska',
+        author: 'Olek Olowski',
       },
     ],
   },
@@ -86,6 +103,7 @@ export const DATA = [
         count: 11,
         unit: 'kg',
         location: 'Wies Polska',
+        author: 'Antoni Antonowski',
       },
       {
         id: '2',
@@ -94,6 +112,7 @@ export const DATA = [
         count: 1,
         unit: 'kg',
         location: 'Wies Polska',
+        author: 'Marcin Domagała',
       },
       {
         id: '3',
@@ -102,6 +121,7 @@ export const DATA = [
         count: 25,
         unit: 'kg',
         location: 'Wies Polska',
+        author: 'Wojciech Wojciechowski',
       },
       {
         id: '4',
@@ -110,6 +130,7 @@ export const DATA = [
         count: 25,
         unit: 'kg',
         location: 'Wies Polska',
+        author: 'Kamila Kamilowska',
       },
     ],
   },
@@ -124,6 +145,7 @@ export const DATA = [
         count: 25,
         unit: 'kg',
         location: 'Wies Polska',
+        author: 'Kamil Kamilowski',
       },
       {
         id: '2',
@@ -132,6 +154,7 @@ export const DATA = [
         count: 25,
         unit: 'kg',
         location: 'Wies Polska',
+        author: 'Huber Hubertowski',
       },
       {
         id: '3',
@@ -140,6 +163,7 @@ export const DATA = [
         count: 25,
         unit: 'kg',
         location: 'Wies Polska',
+        author: 'Martyna Martynowska',
       },
       {
         id: '4',
@@ -148,6 +172,7 @@ export const DATA = [
         count: 25,
         unit: 'kg',
         location: 'Wies Polska',
+        author: 'Martyna Martynowska',
       },
     ],
   },
@@ -162,6 +187,7 @@ export const DATA = [
         count: 25,
         unit: 'kg',
         location: 'Wies Polska',
+        author: 'Radek Radewski',
       },
       {
         id: '2',
@@ -170,6 +196,7 @@ export const DATA = [
         count: 25,
         unit: 'kg',
         location: 'Wies Polska',
+        author: 'Zuza Zuzowa',
       },
       {
         id: '3',
@@ -178,6 +205,7 @@ export const DATA = [
         count: 25,
         unit: 'kg',
         location: 'Wies Polska',
+        author: 'Konrad Konradowski',
       },
       {
         id: '4',
@@ -186,6 +214,7 @@ export const DATA = [
         count: 25,
         unit: 'kg',
         location: 'Wies Polska',
+        author: 'Bobo Bobowski',
       },
     ],
   },
