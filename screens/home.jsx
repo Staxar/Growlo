@@ -7,9 +7,6 @@ export default function HomeScreen({ navigation }) {
   return (
     <SafeAreaView>
       <View style={styles.home_container}>
-        <Button mode="contained" onPress={navigation.navigate('DetailsScreen', { id: 1 })}>
-          Press
-        </Button>
         <View style={styles.home_content}>
           <FlatList
             data={DATA}

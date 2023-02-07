@@ -5,7 +5,7 @@ export default function DetailsScreen({ navigation, route }) {
   return (
     <SafeAreaView>
       <View>
-        <Text>Details</Text>
+        <Text>itemId: {route.params}</Text>
       </View>
     </SafeAreaView>
   );

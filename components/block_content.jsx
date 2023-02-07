@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Avatar, Card, Text } from 'react-native-paper';
-export default function BlockContent({ props }) {
+export default function BlockContent({ props, navigation }) {
   return (
     <Card
       style={{
@@ -11,6 +11,7 @@ export default function BlockContent({ props }) {
         backgroundColor: '#fff',
         maxWidth: 200,
       }}
+      onPress={() => navigation.navigate('DetailsScreen', props.id)}
     >
       <Card.Cover source={props.img} style />
 
