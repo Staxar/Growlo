@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, SafeAreaView, FlatList, View } from 'react-native';
 import Block from '../components/block';
 import { DATA } from '../assets/DATA';
+import { Button } from 'react-native-paper';
 export default function HomeScreen({ navigation }) {
   return (
     <SafeAreaView>

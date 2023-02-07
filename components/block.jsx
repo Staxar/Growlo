@@ -23,7 +23,7 @@ export default function Block({ props, navigation }) {
       <FlatList
         horizontal
         data={props.data}
-        renderItem={({ item }) => <BlockContent props={item} />}
+        renderItem={({ item }) => <BlockContent props={item} navigation={navigation} />}
         keyExtractor={(item) => item.id}
         style={{ overflow: 'hidden' }}
       ></FlatList>
