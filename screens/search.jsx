@@ -23,7 +23,7 @@ export default function SearchScreen({ navigation, route }) {
           <List.Section>
             {DATA.map((item) => {
               return (
-                <List.Accordion title={item.title}>
+                <List.Accordion title={item.title} key={item.id + item.title}>
                   {item.data
                     .filter((product) => product.title.includes(searchQuery))
                     .map((x, index) => {
@@ -37,7 +37,7 @@ export default function SearchScreen({ navigation, route }) {
                             marginHorizontal: 5,
                             marginVertical: 3,
                           }}
-                          key={index}
+                          key={index + x.title}
                           left={(props) => (
                             <Image
                               source={x.img}
