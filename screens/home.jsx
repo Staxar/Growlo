@@ -1,16 +1,17 @@
 import React from 'react';
-import { StyleSheet, SafeAreaView, FlatList, View } from 'react-native';
+import { StyleSheet, SafeAreaView, FlatList, View, SectionList } from 'react-native';
 import Block from '../components/block';
 import { DATA } from '../assets/DATA';
 import { Button } from 'react-native-paper';
+import { DATA_CATEGORY } from '../assets/DATA_CATEGORY';
 export default function HomeScreen({ navigation }) {
   return (
     <SafeAreaView>
       <View style={styles.home_container}>
         <View style={styles.home_content}>
           <FlatList
-            data={DATA}
-            renderItem={({ item }) => <Block props={item} navigation={navigation} />}
+            data={DATA_CATEGORY}
+            renderItem={({ item }) => <Block props={item.category} navigation={navigation} />}
             keyExtractor={(item) => item.id}
           />
         </View>

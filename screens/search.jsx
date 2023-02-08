@@ -2,14 +2,13 @@ import React from 'react';
 import { Image, SafeAreaView, ScrollView, View } from 'react-native';
 import { Searchbar, Text, List } from 'react-native-paper';
 import { DATA } from '../assets/DATA';
-
+import { DATA_CATEGORY } from '../assets/DATA_CATEGORY';
 export default function SearchScreen({ navigation, route }) {
   const [searchQuery, setSearchQuery] = React.useState('');
   const onChangeSearch = (query) => setSearchQuery(query);
 
   const [expanded, setExpanded] = React.useState(true);
   const handlePress = () => setExpanded(!expanded);
-
   return (
     <SafeAreaView>
       <ScrollView>
@@ -21,10 +20,10 @@ export default function SearchScreen({ navigation, route }) {
             style={{ marginVertical: 5 }}
           />
           <List.Section>
-            {DATA.map((item) => {
+            {DATA_CATEGORY.map((item) => {
               return (
-                <List.Accordion title={item.title} key={item.id + item.title}>
-                  {item.data
+                <List.Accordion title={item.category} key={item.id + item.title}>
+                  {DATA.filter((product) => product.category.includes(item.category))
                     .filter((product) => product.title.includes(searchQuery))
                     .map((x, index) => {
                       return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Avatar, Card, Text } from 'react-native-paper';
-export default function BlockContent({ props, navigation }) {
+export default function BlockContent({ props, navigation, category, product_cat }) {
   return (
     <Card
       style={{
