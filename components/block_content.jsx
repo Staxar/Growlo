@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Avatar, Card, Text } from 'react-native-paper';
-export default function BlockContent({ props, navigation, category, product_cat }) {
+export default function BlockContent({ props, navigation }) {
   return (
     <Card
       style={{
@@ -21,7 +21,7 @@ export default function BlockContent({ props, navigation, category, product_cat 
           marginTop: 10,
         }}
       >
-        <Text variant="titleMedium">Prize: {props.id}</Text>
+        <Text variant="titleMedium">{props.title}</Text>
         <Text variant="bodySmall">
           Quantity: {props.count} {props.unit}
         </Text>

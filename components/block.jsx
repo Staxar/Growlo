@@ -20,7 +20,7 @@ export default function Block({ props, navigation }) {
       </View>
       <ScrollView horizontal>
         {DATA.filter((product) => product.category === props).map((item) => {
-          return <BlockContent props={item} />;
+          return <BlockContent props={item} navigation={navigation} />;
         })}
       </ScrollView>
     </View>

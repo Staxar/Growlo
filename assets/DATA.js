@@ -8,6 +8,7 @@ export const DATA = [
     location: 'Raleigh',
     author: 'Marcin Domagała',
     category: 'Fruits',
+    decription: 'I will give away apples from my tree in the garden',
   },
   {
     id: '2',
