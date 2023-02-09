@@ -1,8 +1,6 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, FlatList, View, SectionList } from 'react-native';
 import Block from '../components/block';
-import { DATA } from '../assets/DATA';
-import { Button } from 'react-native-paper';
 import { DATA_CATEGORY } from '../assets/DATA_CATEGORY';
 export default function HomeScreen({ navigation }) {
   return (
