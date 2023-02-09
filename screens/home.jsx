@@ -12,7 +12,7 @@ export default function HomeScreen({ navigation }) {
           <FlatList
             data={DATA_CATEGORY}
             renderItem={({ item }) => <Block props={item.category} navigation={navigation} />}
-            keyExtractor={(item) => item.id}
+            keyExtractor={(item, index) => item.category + index}
           />
         </View>
       </View>
