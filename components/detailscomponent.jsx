@@ -11,9 +11,8 @@ export default function DetailScreenComponent({ id }) {
   return (
     <>
       {DATA.filter((product) => product.id == productid).map((item) => {
-        console.log(item);
         return (
-          <View>
+          <View key={item.id}>
             <View>
               <Image source={item.img} style={{ width: '100%', height: 200 }} />
             </View>

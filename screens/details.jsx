@@ -9,7 +9,6 @@ export default function DetailsScreen({ navigation, route }) {
   useEffect(() => {
     setproductid(route.params);
   }, [route]);
-  console.log('DETAILSCREEN --> ', productid);
   return (
     <SafeAreaView>
       <View>
