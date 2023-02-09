@@ -9,8 +9,8 @@ export default function DetailScreenComponent({ id }) {
   const [productid, setProductId] = useState();
   const [location, setLocation] = useState();
   const [errorMsg, setErrorMsg] = useState(null);
-  const [someregion, setRegionsomeregion] = useState({ x: 0, y: 0 });
-
+  const [userRegion, setUserRegion] = useState({ x: 0, y: 0 });
+  const [productregion, setProductRegion] = useState({ x: 0, y: 0 });
   useEffect(() => {
     setProductId(Number(id));
   }, [id]);
@@ -24,10 +24,15 @@ export default function DetailScreenComponent({ id }) {
 
       let location = await Location.getCurrentPositionAsync({});
       setLocation(location);
-      setRegionsomeregion({
-        ...someregion,
+      setUserRegion({
+        ...userRegion,
         x: location.coords.latitude,
         y: location.coords.longitude,
+      });
+      setProductRegion({
+        ...productregion,
+        x: location.coords.latitude + 500,
+        y: location.coords.longitude + 500,
       });
     })();
   }, []);
@@ -36,7 +41,7 @@ export default function DetailScreenComponent({ id }) {
     text = errorMsg;
   } else if (location) {
     text = JSON.stringify(location);
-    console.log(someregion);
+    console.log(userRegion);
   }
 
   return (
@@ -59,7 +64,8 @@ export default function DetailScreenComponent({ id }) {
             <View style={{ padding: 10, height: 250 }}>
               <Text>Localization</Text>
               <MapView style={{ width: '100%', height: '100%' }}>
-                <Marker coordinate={{ latitude: someregion.x, longitude: someregion.y }} />
+                <Marker coordinate={{ latitude: userRegion.x, longitude: userRegion.y }} />
+                <Marker coordinate={{ latitude: productregion.x, longitude: productregion.y }} />
               </MapView>
             </View>
             <View style={{ padding: 10, height: 25 }}>
