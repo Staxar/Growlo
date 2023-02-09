@@ -21,7 +21,7 @@ export default function BlockContent({ props, navigation }) {
           marginTop: 10,
         }}
       >
-        <Text variant="titleMedium">Prize: {props.id}</Text>
+        <Text variant="titleMedium">{props.title}</Text>
         <Text variant="bodySmall">
           Quantity: {props.count} {props.unit}
         </Text>
