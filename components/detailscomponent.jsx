@@ -25,6 +25,9 @@ export default function DetailScreenComponent({ id }) {
               <Text style={{ marginVertical: 10 }}>Description</Text>
               <Text>{item.decription}</Text>
             </View>
+            <View style={{ padding: 10 }}>
+              <Text>Localization</Text>
+            </View>
           </View>
         );
       })}
