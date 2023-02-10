@@ -10,10 +10,11 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { Text } from 'react-native-paper';
 import DetailsScreen from './screens/details';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React from 'react';
 const globalstyle = require('./styles/style');
 const Stack = createNativeStackNavigator();
 const BottomTabs = createBottomTabNavigator();
-
+const UserContext = React.createContext('localization');
 function Overview() {
   return (
     <BottomTabs.Navigator>
@@ -50,20 +51,22 @@ function Overview() {
 }
 export default function App() {
   return (
-    <View style={{ flex: 1, width: '100%', height: '100%' }}>
-      <View style={globalstyle.header_container}>
-        <Text style={globalstyle.header_text} variant="headlineSmall">
-          Growlo
-          <Ionicons name="leaf" size={32} color="green" />
-        </Text>
+    <UserContext.Provider value="">
+      <View style={{ flex: 1, width: '100%', height: '100%' }}>
+        <View style={globalstyle.header_container}>
+          <Text style={globalstyle.header_text} variant="headlineSmall">
+            Growlo
+            <Ionicons name="leaf" size={32} color="green" />
+          </Text>
+        </View>
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen name="Overview" component={Overview} options={{ headerShown: false }} />
+            <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
+          </Stack.Navigator>
+        </NavigationContainer>
       </View>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Overview" component={Overview} options={{ headerShown: false }} />
-          <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </View>
+    </UserContext.Provider>
   );
 }
 
