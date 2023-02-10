@@ -11,7 +11,7 @@ export default function DetailsScreen({ navigation, route }) {
   }, [route]);
   return (
     <SafeAreaView style={{ height: '100%', width: '100%' }}>
-      <View style={{ height: '100%', width: '100%' }}>
+      <View style={{ height: '100%', width: '100%', backgroundColor: '#ffff' }}>
         <DetailScreenComponent id={productid} />
       </View>
     </SafeAreaView>

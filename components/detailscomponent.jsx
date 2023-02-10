@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Image, ScrollView, View } from 'react-native';
-import { Avatar, Card, Text } from 'react-native-paper';
+import { Avatar, Text } from 'react-native-paper';
 import { DATA } from '../assets/DATA';
 import MapView, { Marker } from 'react-native-maps';
 import * as Location from 'expo-location';
@@ -57,12 +57,16 @@ export default function DetailScreenComponent({ id }) {
               <Text style={{ marginHorizontal: 10 }}>{item.author}</Text>
             </View>
             <View style={{ padding: 10 }}>
-              <Text style={{ marginVertical: 10 }}>{item.title}</Text>
-              <Text style={{ marginVertical: 10 }}>Description</Text>
-              <Text>{item.decription}</Text>
+              <Text style={{ marginVertical: 10 }} variant="bodyMedium">
+                {item.title}
+              </Text>
+              <Text style={{ marginVertical: 10 }} variant="titleMedium">
+                Description
+              </Text>
+              <Text variant="bodySmall">{item.decription}</Text>
             </View>
             <View style={{ padding: 10, height: 250 }}>
-              <Text>Localization</Text>
+              <Text variant="titleMedium">Localization</Text>
               <MapView style={{ width: '100%', height: '100%' }}>
                 <Marker coordinate={{ latitude: userRegion.x, longitude: userRegion.y }} />
                 <Marker coordinate={{ latitude: productregion.x, longitude: productregion.y }} />
