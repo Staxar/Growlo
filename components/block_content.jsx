@@ -12,6 +12,7 @@ export default function BlockContent({ props, navigation }) {
         maxWidth: 200,
       }}
       onPress={() => navigation.navigate('DetailsScreen', props.id)}
+      testID="BlockContentCard"
     >
       <Card.Cover source={props.img} style />
 

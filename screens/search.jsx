@@ -28,6 +28,7 @@ export default function SearchScreen({ navigation, route }) {
                     .map((x, index) => {
                       return (
                         <List.Item
+                          onPress={() => navigation.navigate('DetailsScreen', x.id)}
                           title={x.title}
                           description={[x.location, ' ', x.count, ' ', x.unit, ' ', x.author]}
                           style={{
